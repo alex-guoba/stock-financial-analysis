@@ -1,0 +1,34 @@
+{
+  "name": "stock_financial_analysis",
+  "description": "获取A股股票三大财务报表并生成财务分析报告",
+  "version": "1.0.0",
+  "author": "user",
+  "type": "command",
+  "command": "cd scripts && poetry run python main.py {type} {code} {period}",
+  "parameters": {
+    "type": "object",
+    "required": ["code"],
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": ["all", "profit", "balance", "cashflow"],
+        "description": "all=三大表 profit=利润表 balance=资产负债表 cashflow=现金流量表",
+        "default": "all"
+      },
+      "code": {
+        "type": "string",
+        "description": "6位股票代码 600690 603979"
+      },
+      "period": {
+        "type": "string",
+        "enum": ["year", "quarter"],
+        "description": "year=年报 quarter=季报",
+        "default": "year"
+      }
+    }
+  },
+  "output": {
+    "format": "text",
+    "useStdout": true
+  }
+}

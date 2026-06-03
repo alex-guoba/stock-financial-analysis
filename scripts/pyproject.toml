@@ -1,0 +1,23 @@
+[tool.poetry]
+package-mode = false
+
+[project]
+name = "stock_financial_analysis"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "alex.guoba@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "akshare (>=1.18.64,<2.0.0)",
+    "fire (>=0.7.1,<0.8.0)",
+    "pandas (>=3.0.3,<4.0.0)",
+    "numpy (>=2.4.6,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
