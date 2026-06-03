@@ -162,7 +162,7 @@ def process_profit(
 
     print(to_markdown(profit_df, title))
     if file_name:
-        profit_df.to_excel(file_name, sheet_name=f"{stock_name}-利润表", index=False)
+        profit_df.to_excel(file_name, sheet_name=f"{stock_name}-利润表", index=True)
         print(f"\n✅ 导出成功：{file_name}")
 
 
